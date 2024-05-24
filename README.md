@@ -1,9 +1,9 @@
 # UN Verifiable Trade Documents
 
 This project implements JSON Schema defining the core data structures of messages exchanged over API communication. The driving principles at this layer is to 
-a) promote modular data modeling for optimal reuse of components, 
-b) strive for simplicity in the recognition that the targeted user base is heterogeneous and thus the developer and user experience are essential measures of success, and 
-c) adhere to a defined list of design conventions to prevent inconsistent user experiences.
+1. promote modular data modeling for optimal reuse of components, 
+2. strive for simplicity in the recognition that the targeted user base is heterogeneous and thus the developer and user experience are essential measures of success, and 
+3. adhere to a defined list of design conventions to prevent inconsistent user experiences.
 
 One major benefit of JSON Schema is the vast choice of libraries which support it. The trade document schemas will be presented and made available online leveraging such tools. This includes document forms and examples, presented in a way intuitive to a non-technical, business and legislative audience. By consuming the project’s own JSON Schema output, we ensure feasibility, usability and show a practical way for implementers to adopt these UN/CEFACT outputs. 
 
