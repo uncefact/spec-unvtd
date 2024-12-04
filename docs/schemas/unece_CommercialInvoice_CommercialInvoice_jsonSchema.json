@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "invoiceNumber": {
+      "type": "string",
+      "description": ""
+    },
+    "amount": {
+      "type": "number",
+      "format": "float",
+      "description": ""
+    },
+    "currency": {
+      "type": "string",
+      "description": ""
+    }
+  },
+  "description": "",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {}
+}
