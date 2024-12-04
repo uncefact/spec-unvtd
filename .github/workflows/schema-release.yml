@@ -1,0 +1,62 @@
+name: jargon-release
+
+on:
+  repository_dispatch:
+    types:
+      - jargon_onRelease
+
+jobs:
+  handle-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create a new branch
+        run: |
+          BRANCH_NAME="release-${{ github.event.client_payload.release.index }}-${{ github.run_id }}"
+          echo "Creating and switching to new branch $BRANCH_NAME"
+          git checkout -b $BRANCH_NAME
+
+      - name: Prepare working directory
+        run: mkdir -p docs/schemas
+
+      - name: Download and copy JSON schemas
+        run: |
+          echo "Extracting JSON schemas from release payload..."
+          JSON_SCHEMAS=$(echo '${{ toJson(github.event.client_payload.artefacts.jsonSchemas) }}' | jq -c '.')
+          
+          for schema in $(echo $JSON_SCHEMAS | jq -c '.[]'); do
+            FILE_NAME=$(echo $schema | jq -r '.fileName')
+            URL=$(echo $schema | jq -r '.url')
+            
+            echo "Downloading $FILE_NAME from $URL..."
+            curl -L $URL -o "docs/schemas/$FILE_NAME"
+          done
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          echo "Adding and committing downloaded files..."
+          git add docs/schemas
+          git commit -m "Add JSON schema files from release repository_dispatch event"
+
+      - name: Push branch
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH_NAME="release-${{ github.event.client_payload.release.index }}-${{ github.run_id }}"
+          echo "Pushing branch $BRANCH_NAME"
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }} $BRANCH_NAME
+
+      - name: Create pull request
+        run: |
+          PR_TITLE="${{ github.event.client_payload.domain.name }} ${{ github.event.client_payload.action.type }}"
+          echo "Creating pull request with title: $PR_TITLE"
+          gh pr create -B main -H release-${{ github.event.client_payload.snapshot.index }}-${{ github.run_id }} --title "$PR_TITLE" --body 'PR generated from Jargon.'
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+

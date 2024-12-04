@@ -18,3 +18,12 @@ The project will primarily aim to implement the documents which were targeted by
 The KTDDE specification is considered to be a starting point guidance, but the project does not promise to follow the specification strictly. In particular this is because details are often uncovered during implementation which can be difficult to catch in the logical phase. 
 
 Similarly, other document types may be included on the premise that they are a generally applicable document commonly exchanged in international trade and transport use cases. 
+
+
+## Development
+
+```
+pip install mkdocs-material
+pip install mkdocs-include-markdown-plugin
+mkdocs serve
+```
