@@ -3,10 +3,10 @@ A commercial document which consists of an itemised account of goods or services
 
 ## Example
 ```json
-{% include "schemas/instance.json" %}
+{% include "schemas/unece_CommercialInvoice_CommercialInvoice_instance_jsonSchema.json" %}
 ```
 
 ## Schema
 ```json
-{% include "schemas/schema.json" %}
+{% include "schemas/unece_CommercialInvoice_CommercialInvoice_jsonSchema.json" %}
 ```
