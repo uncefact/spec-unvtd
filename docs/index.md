@@ -1,6 +1,6 @@
 # About
 
-UN/CEFACT Verifiable Trade Documents is an implementation of the logical data models which was created in the 2024 ICC DSI KTDDE project. The UN-VTD physical implementation is specifically targeted issuance of documents as Verifiable Credentials. 
+UN/CEFACT Verifiable Trade Documents is an implementation of the logical data models which was created in the [2024 ICC DSI KTDDE](https://www.digitalizetrade.org/ktdde/) project. The UN-VTD physical implementation is specifically targeted issuance of documents as Verifiable Credentials. 
 
 ![The KTDDE phase one trade documents](./images/ktdde.jpg)
 
