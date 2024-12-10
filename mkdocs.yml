@@ -1,5 +1,5 @@
 site_name: Verifiable Trade Documents
-#site_url: https://nissimsan.github.io/un-vtd
+site_url: https://uncefact.github.io/spec-unvtd/
 theme: 
   name: material
   logo: images/logo.svg
@@ -14,16 +14,11 @@ theme:
     - content.tabs.link
     - content.code.copy
   palette:
-
-    # Palette toggle for light mode
     - scheme: default
       toggle:
         icon: material/white-balance-sunny
         name: Switch to dark mode
       primary: white
-        
-
-    # Palette toggle for dark mode
     - scheme: slate
       toggle:
         icon: material/weather-night

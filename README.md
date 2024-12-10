@@ -1,5 +1,14 @@
 # UN Verifiable Trade Documents
 
+## Introduction
+UN/CEFACT is in a unique position to lead as the world transitions to the next generation of scalable, secure, digital infrastructure, as emergent verifiable credentials and surrounding technologies are adopted by global trade and logistics actors. In embracing this opportunity, the project aims to design and promote a suite of lightweight global trade documents specifically targeted at modern, digitally verifiable web usage.
+
+UN Verifiable Trade Documents will be based on the UN/CEFACT semantic vocabulary and use the rich library of document standards as input. Additionally, the project seeks to leverage the recently published ICC DSI KTDDE as a starting point for what constitutes the minimum set of data elements per document. This will be mutually beneficial for both organizations: ICC DSI does not wish to progress into physical implementations, but will benefit from an international standards body implementing the output of their excellent work. Consequently, it is expected that ICC DSI will be supportive in promoting the UN Verifiable Trade Documents implementation.
+
+UN Verifiable Trade Documents will follow the same technical architecture as the W3C CCG Traceability Vocabulary project, which is supported by US Customs and Border Protection. 
+
+
+
 This project implements JSON Schema defining the core data structures of messages exchanged over API communication. The driving principles at this layer is to 
 1. promote modular data modeling for optimal reuse of components, 
 2. strive for simplicity in the recognition that the targeted user base is heterogeneous and thus the developer and user experience are essential measures of success, and 
