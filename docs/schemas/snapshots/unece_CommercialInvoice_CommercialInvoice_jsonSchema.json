@@ -2,21 +2,78 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "invoiceNumber": {
-      "type": "string",
+    "issuer": {
+      "$ref": "#/$defs/Party",
       "description": ""
     },
-    "amount": {
-      "type": "number",
-      "format": "float",
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time",
       "description": ""
     },
-    "currency": {
-      "type": "string",
+    "credentialSubject": {
+      "$ref": "#/$defs/CredentialSubject",
+      "description": ""
+    },
+    "vtd-core.CredentialSubject": {
+      "$ref": "#/$defs/CredentialSubject",
       "description": ""
     }
   },
   "description": "",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$defs": {}
+  "$defs": {
+    "Party": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Party",
+          "enum": [
+            "Party"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    },
+    "Address": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": "Zip or postal code for the address"
+        }
+      },
+      "description": ""
+    },
+    "CredentialSubject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "description": ""
+    }
+  }
 }
