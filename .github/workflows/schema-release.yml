@@ -26,7 +26,6 @@ jobs:
         run: |
           echo "Download JSON schemas from release payload..."
           JSON_SCHEMAS=$(echo '${{ toJson(github.event.client_payload.artefacts.jsonSchemas) }}' | jq -c '.')
-          
           for schema in $(echo $JSON_SCHEMAS | jq -c '.[]'); do
             FILE_NAME=$(echo $schema | jq -r '.fileName')
             URL=$(echo $schema | jq -r '.url')
@@ -37,38 +36,14 @@ jobs:
 
       - name: Download and data model diagram
         run: |
-          echo "Download data model diagram from release payload..."
-
-          DATA_MODEL=$(echo '${{ toJson(github.event.client_payload.artefacts.dataModel) }}' | jq -c '.')
-          DATA_MODEL_FILE_NAME=$(echo $DATA_MODEL | jq -r '.fileName')
-          DATA_MODEL_URL=$(echo $DATA_MODEL | jq -r '.url')
-
-          echo "Downloading data model $DATA_MODEL_FILE_NAME from $DATA_MODEL_URL..."
-          curl -L $DATA_MODEL_URL -o "docs/schemas/$DATA_MODEL_FILE_NAME"
-
-      - name: Download and copy artefacts
-        run: |
-          echo "Extracting artefacts from release payload..."
-
-          # Download JSON schemas
-          JSON_SCHEMAS=$(echo '${{ toJson(github.event.client_payload.artefacts.jsonSchemas) }}' | jq -c '.')
-          for schema in $(echo $JSON_SCHEMAS | jq -c '.[]'); do
-            FILE_NAME=$(echo $schema | jq -r '.fileName')
-            URL=$(echo $schema | jq -r '.url')
-            
-            echo "Downloading $FILE_NAME from $URL..."
-            curl -L $URL -o "docs/schemas/$FILE_NAME"
-          done
-
           # Download data model
+          echo "Download data model diagram from release payload..."
           DATA_MODEL=$(echo '${{ toJson(github.event.client_payload.artefacts.dataModel) }}' | jq -c '.')
           DATA_MODEL_FILE_NAME=$(echo $DATA_MODEL | jq -r '.fileName')
           DATA_MODEL_URL=$(echo $DATA_MODEL | jq -r '.url')
 
           echo "Downloading data model $DATA_MODEL_FILE_NAME from $DATA_MODEL_URL..."
           curl -L $DATA_MODEL_URL -o "docs/schemas/$DATA_MODEL_FILE_NAME"
-
-
 
       - name: Commit changes
         run: |
