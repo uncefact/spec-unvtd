@@ -18,8 +18,20 @@ jobs:
           BRANCH_NAME="release-${{ github.event.client_payload.release.index }}-${{ github.run_id }}"
           echo "Creating and switching to new branch $BRANCH_NAME"
           git checkout -b $BRANCH_NAME
+
       - name: Prepare working directory
         run: mkdir -p docs/schemas
+
+      - name: Download and data model diagram
+        run: |
+          echo "Download data model diagram from release payload..."
+          DATA_MODEL=$(echo '${{ toJson(github.event.client_payload.artefacts.dataModel) }}' | jq -c '.')
+          DATA_MODEL_FILE_NAME=$(echo $DATA_MODEL | jq -r '.fileName')
+          DATA_MODEL_URL=$(echo $DATA_MODEL | jq -r '.url')
+
+          echo "Downloading data model $DATA_MODEL_FILE_NAME from $DATA_MODEL_URL..."
+          curl -L $DATA_MODEL_URL -o "docs/schemas/$DATA_MODEL_FILE_NAME"
+
       - name: Download and copy JSON schemas
         run: |
           echo "Download JSON schemas from release payload..."
