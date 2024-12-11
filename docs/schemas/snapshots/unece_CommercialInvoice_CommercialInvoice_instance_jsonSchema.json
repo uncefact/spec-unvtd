@@ -1,5 +1,38 @@
 {
-  "invoiceNumber": "The quick brown fox jumps over the lazy dog.",
-  "amount": 3.141579,
-  "currency": "The quick brown fox jumps over the lazy dog."
+  "issuer": {
+    "id": "https://jargon.sh",
+    "address": {
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345
+    }
+  },
+  "issuanceDate": "1970-01-01T00:00:00Z",
+  "credentialSubject": {},
+  "vtd-core.CredentialSubject": {
+    "invoiceNumber": "The quick brown fox jumps over the lazy dog.",
+    "contractNumber": "The quick brown fox jumps over the lazy dog.",
+    "amount": 3.141579,
+    "currency": "The quick brown fox jumps over the lazy dog.",
+    "buyer": {
+      "id": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "seller": {
+      "id": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "attr": "The quick brown fox jumps over the lazy dog."
+  }
 }
