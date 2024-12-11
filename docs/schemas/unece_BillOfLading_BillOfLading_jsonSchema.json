@@ -1,0 +1,122 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "issuer": {
+      "$ref": "#/$defs/Party",
+      "description": ""
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": ""
+    },
+    "credentialSubject": {
+      "$ref": "#/$defs/Consignment",
+      "description": ""
+    }
+  },
+  "description": "A request to purchase one or more goods",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Party": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    },
+    "Address": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": "Zip or postal code for the address"
+        }
+      },
+      "description": ""
+    },
+    "Consignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number for the user"
+        },
+        "billOfLadingNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "bookingNumber[]": {
+          "type": "string",
+          "description": ""
+        },
+        "shipper": {
+          "$ref": "#/$defs/Shipper",
+          "description": ""
+        },
+        "consignee": {
+          "$ref": "#/$defs/Consignee",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Shipper": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    },
+    "Consignee": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    }
+  }
+}
