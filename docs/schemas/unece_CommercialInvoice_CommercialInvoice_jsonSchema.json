@@ -2,25 +2,21 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "invoiceNumber": {
-      "type": "string",
-      "description": ""
-    },
-    "amount": {
-      "type": "number",
-      "format": "float",
-      "description": ""
-    },
-    "currency": {
-      "type": "string",
-      "description": ""
-    },
-    "buyer": {
+    "issuer": {
       "$ref": "#/$defs/Party",
       "description": ""
     },
-    "seller": {
-      "$ref": "#/$defs/Party",
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": ""
+    },
+    "credentialSubject": {
+      "$ref": "#/$defs/CredentialSubject",
+      "description": ""
+    },
+    "vtd-core.CredentialSubject": {
+      "$ref": "#/$defs/CredentialSubject",
       "description": ""
     }
   },
@@ -71,6 +67,12 @@
           "description": "Zip or postal code for the address"
         }
       },
+      "description": ""
+    },
+    "CredentialSubject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
       "description": ""
     }
   }
