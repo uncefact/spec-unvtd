@@ -8,6 +8,9 @@ UN Verifiable Trade Documents will be based on the UN/CEFACT semantic vocabulary
 UN Verifiable Trade Documents will follow the same technical architecture as the W3C CCG Traceability Vocabulary project, which is supported by US Customs and Border Protection. 
 
 
+The project will prioritize simplicity and recognizability in order to maximize business usage uptake and implementation efficiency. The targeted list of trade documents will be designed for an opinionated modern technology stack, in alignment with the UN/CEFACT technology architecture strategy, prioritizing unambiguity, coherency and interoperability for implementers.
+
+
 
 This project implements JSON Schema defining the core data structures of messages exchanged over API communication. The driving principles at this layer is to 
 1. promote modular data modeling for optimal reuse of components, 
