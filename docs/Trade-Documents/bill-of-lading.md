@@ -3,10 +3,10 @@ A document to provide evidence of contract of carriage; confirmation of receipt 
 
 ## Example
 ```json
-{% include "schemas/instance.json" %}
+{% include "schemas/unece_BillOfLading_BillOfLading_instance_jsonSchema.json" %}
 ```
 
 ## Schema
 ```json
-{% include "schemas/schema.json" %}
+{% include "schemas/unece_BillOfLading_BillOfLading_jsonSchema.json" %}
 ```
