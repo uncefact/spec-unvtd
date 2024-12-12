@@ -1,0 +1,342 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "issuer": {
+      "$ref": "#/$defs/Party",
+      "description": ""
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": ""
+    },
+    "credentialSubject": {
+      "$ref": "#/$defs/Order",
+      "description": ""
+    }
+  },
+  "description": "",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Party": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    },
+    "Address": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": "Zip or postal code for the address"
+        }
+      },
+      "description": ""
+    },
+    "Order": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "purchaseOrderNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "contractNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "orderDate": {
+          "type": "string",
+          "format": "date",
+          "description": ""
+        },
+        "deliveryDate": {
+          "type": "string",
+          "format": "date",
+          "description": ""
+        },
+        "buyer": {
+          "$ref": "#/$defs/Buyer",
+          "description": ""
+        },
+        "invoicee": {
+          "$ref": "#/$defs/Invoicee",
+          "description": ""
+        },
+        "shipToParty": {
+          "$ref": "#/$defs/ShipToParty",
+          "description": ""
+        },
+        "seller": {
+          "$ref": "#/$defs/Seller",
+          "description": ""
+        },
+        "placeOfDelivery": {
+          "$ref": "#/$defs/PlaceOfDelivery",
+          "description": ""
+        },
+        "originCountry": {
+          "$ref": "#/$defs/OriginCountry",
+          "description": ""
+        },
+        "paymentTerms": {
+          "$ref": "#/$defs/PaymentTerms",
+          "description": ""
+        },
+        "paymentMethod": {
+          "$ref": "#/$defs/PaymentMethod",
+          "description": ""
+        },
+        "unitPrice": {
+          "$ref": "#/$defs/UnitPrice",
+          "description": ""
+        },
+        "allowance": {
+          "$ref": "#/$defs/Allowance",
+          "description": ""
+        },
+        "orderAmount": {
+          "$ref": "#/$defs/OrderAmount",
+          "description": ""
+        },
+        "taxAmount": {
+          "$ref": "#/$defs/TaxAmount",
+          "description": ""
+        },
+        "productIdentifier": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number for the user"
+        },
+        "quantityOrdered": {
+          "$ref": "#/$defs/QuantityOrdered",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Buyer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    },
+    "Invoicee": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    },
+    "ShipToParty": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    },
+    "Seller": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "A unique number that identifies a customer"
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": "The shipping address for the customer where they would like their orders delivered"
+        }
+      },
+      "description": ""
+    },
+    "PlaceOfDelivery": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unlocode": {
+          "type": "string",
+          "format": "uri",
+          "description": ""
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "OriginCountry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unlocode": {
+          "type": "string",
+          "format": "uri",
+          "description": ""
+        },
+        "address": {
+          "$ref": "#/$defs/Address",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "PaymentTerms": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "terms": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "PaymentMethod": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "terms": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "UnitPrice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "currency": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Allowance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "currency": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "OrderAmount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "currency": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "TaxAmount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "currency": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "QuantityOrdered": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "unit": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    }
+  }
+}
