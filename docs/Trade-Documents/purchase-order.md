@@ -1,8 +1,10 @@
 # Purchase Order
 
-
+### KTDDE Requirements
 The schema is based on the data elements defined [here](https://www.digitalizetrade.org/ktdde/documents?documents=17).
 
+## Data Model
+{% include "schemas/unece_PurchaseOrder_dataModel.svg" %}
 
 ## Example
 ```json
