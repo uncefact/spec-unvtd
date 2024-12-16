@@ -1,4 +1,4 @@
-# Insurance Certificate
+# Cargo Insurance Document
 The Cargo Insurance Document serves to provide evidence of insurance coverage, fulfilling various international trade and regulatory needs. Depending on context, it may be presented as:
 
 - Certificate of Insurance and Insurance Policy: typically issued at the shipper’s request, often to fulfil Letter of Credit requirements.

@@ -2,7 +2,9 @@
 A commercial document which consists of an itemised account of goods or services delivered, together with a demand for payment.
 
 ### KTDDE Requirements
-The schema is based on the data elements defined [here](https://www.digitalizetrade.org/ktdde/documents?documents=18).
+https://www.digitalizetrade.org/ktdde/trade-documents/INV
+
+This schema is based on the data elements defined [here](https://www.digitalizetrade.org/ktdde/documents?documents=18).
 
 
 ## Data Model
