@@ -6,9 +6,7 @@ https://www.digitalizetrade.org/ktdde/trade-documents/INV
 
 This schema is based on the data elements defined [here](https://www.digitalizetrade.org/ktdde/documents?documents=18).
 
-
 ## Data Model
-
 {% include "schemas/unece_CommercialInvoice_dataModel.svg" %}
 
 ## Example
