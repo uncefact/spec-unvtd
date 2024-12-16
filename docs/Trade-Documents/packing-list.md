@@ -3,10 +3,10 @@ A document which covers the physical delivery of goods from one physical site to
 
 ## Example
 ```json
-{% include "schemas/instance.json" %}
+{% include "schemas/unece_PackingList_PackingListCredential_instance_jsonSchema.json" %}
 ```
 
 ## Schema
 ```json
-{% include "schemas/schema.json" %}
+{% include "schemas/unece_PackingList_PackingListCredential_jsonSchema.json" %}
 ```

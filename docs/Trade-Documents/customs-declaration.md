@@ -3,10 +3,10 @@ A document to enable a declarant to indicate the customs procedure to be applied
 
 ## Example
 ```json
-{% include "schemas/instance.json" %}
+{% include "schemas/unece_CustomsDeclaration_CustomsDeclarationCredential_instance_jsonSchema.json" %}
 ```
 
 ## Schema
 ```json
-{% include "schemas/schema.json" %}
+{% include "schemas/unece_CustomsDeclaration_CustomsDeclarationCredential_jsonSchema.json" %}
 ```

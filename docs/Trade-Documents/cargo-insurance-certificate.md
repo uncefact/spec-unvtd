@@ -6,10 +6,10 @@ The Cargo Insurance Document serves to provide evidence of insurance coverage, f
 
 ## Example
 ```json
-{% include "schemas/instance.json" %}
+{% include "schemas/unece_CargoInsuranceDocument_CargoInsuraceDocumentCredential_instance_jsonSchema.json" %}
 ```
 
 ## Schema
 ```json
-{% include "schemas/schema.json" %}
+{% include "schemas/unece_CargoInsuranceDocument_CargoInsuraceDocumentCredential_instance_jsonSchema.json" %}
 ```
