@@ -30,6 +30,7 @@
         "state": "The quick brown fox jumps over the lazy dog.",
         "zip": 12345
       }
-    }
+    },
+    "shippingDate": "1970-01-01"
   }
 }
