@@ -82,6 +82,11 @@
         "consignee": {
           "$ref": "#/$defs/Consignee",
           "description": ""
+        },
+        "shippingDate": {
+          "type": "string",
+          "format": "date",
+          "description": ""
         }
       },
       "description": ""
