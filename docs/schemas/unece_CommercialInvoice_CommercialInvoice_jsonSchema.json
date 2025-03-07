@@ -15,6 +15,11 @@
       "$ref": "#/$defs/CredentialSubject",
       "description": ""
     },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": ""
+    },
     "vtd-core.CredentialSubject": {
       "$ref": "#/$defs/CredentialSubject",
       "description": ""
@@ -39,17 +44,6 @@
           "format": "uri",
           "description": "A unique number that identifies a customer"
         },
-        "address": {
-          "$ref": "#/$defs/Address",
-          "description": "The shipping address for the customer where they would like their orders delivered"
-        }
-      },
-      "description": ""
-    },
-    "Address": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
         "street": {
           "type": "string",
           "description": "The street component of the address"
@@ -65,6 +59,10 @@
         "zip": {
           "type": "number",
           "description": "Zip or postal code for the address"
+        },
+        "country": {
+          "type": "string",
+          "description": ""
         }
       },
       "description": ""
