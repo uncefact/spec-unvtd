@@ -146,21 +146,15 @@
           "type": "string",
           "description": ""
         },
-        "totalInvoiceAmount": {
-          "type": "string",
-          "description": ""
-        },
-        "amount": {
-          "type": "number",
-          "format": "float",
-          "description": ""
-        },
-        "currency": {
-          "type": "string",
-          "description": ""
-        },
         "itemsShipped": {
-          "$ref": "#/$defs/TradeLineItem",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TradeLineItem"
+          },
+          "description": ""
+        },
+        "totalAmount": {
+          "$ref": "#/$defs/MonetaryAmount",
           "description": ""
         }
       },
@@ -401,12 +395,32 @@
           "$ref": "#/$defs/Product",
           "description": ""
         },
+        "sku": {
+          "type": "string",
+          "description": ""
+        },
         "itemCount": {
           "type": "number",
           "description": ""
         },
         "netWeight": {
           "$ref": "#/$defs/Quantity",
+          "description": ""
+        },
+        "grossWeight": {
+          "$ref": "#/$defs/Quantity",
+          "description": ""
+        },
+        "productPrice": {
+          "$ref": "#/$defs/MonetaryAmount",
+          "description": ""
+        },
+        "commodity": {
+          "type": "string",
+          "description": ""
+        },
+        "amount": {
+          "$ref": "#/$defs/MonetaryAmount",
           "description": ""
         }
       },
@@ -434,6 +448,22 @@
           "description": ""
         },
         "unit": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "MonetaryAmount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "currency": {
           "type": "string",
           "description": ""
         }
