@@ -78,18 +78,59 @@
     "tradeTermsConditionsCode": "The quick brown fox jumps over the lazy dog.",
     "paymentTerms": "The quick brown fox jumps over the lazy dog.",
     "paymentMethod": "The quick brown fox jumps over the lazy dog.",
-    "totalInvoiceAmount": "The quick brown fox jumps over the lazy dog.",
-    "amount": 3.141579,
-    "currency": "The quick brown fox jumps over the lazy dog.",
-    "itemsShipped": {
-      "product": {
-        "id": "https://jargon.sh"
+    "itemsShipped": [
+      {
+        "product": {
+          "id": "https://jargon.sh"
+        },
+        "sku": "The quick brown fox jumps over the lazy dog.",
+        "itemCount": 12345,
+        "netWeight": {
+          "amount": 3.141579,
+          "unit": "The quick brown fox jumps over the lazy dog."
+        },
+        "grossWeight": {
+          "amount": 3.141579,
+          "unit": "The quick brown fox jumps over the lazy dog."
+        },
+        "productPrice": {
+          "amount": 3.141579,
+          "currency": "The quick brown fox jumps over the lazy dog."
+        },
+        "commodity": "The quick brown fox jumps over the lazy dog.",
+        "amount": {
+          "amount": 3.141579,
+          "currency": "The quick brown fox jumps over the lazy dog."
+        }
       },
-      "itemCount": 12345,
-      "netWeight": {
-        "amount": 3.141579,
-        "unit": "The quick brown fox jumps over the lazy dog."
+      {
+        "product": {
+          "id": "https://jargon.sh"
+        },
+        "sku": "The quick brown fox jumps over the lazy dog.",
+        "itemCount": 12345,
+        "netWeight": {
+          "amount": 3.141579,
+          "unit": "The quick brown fox jumps over the lazy dog."
+        },
+        "grossWeight": {
+          "amount": 3.141579,
+          "unit": "The quick brown fox jumps over the lazy dog."
+        },
+        "productPrice": {
+          "amount": 3.141579,
+          "currency": "The quick brown fox jumps over the lazy dog."
+        },
+        "commodity": "The quick brown fox jumps over the lazy dog.",
+        "amount": {
+          "amount": 3.141579,
+          "currency": "The quick brown fox jumps over the lazy dog."
+        }
       }
+    ],
+    "totalAmount": {
+      "amount": 3.141579,
+      "currency": "The quick brown fox jumps over the lazy dog."
     }
   }
 }
