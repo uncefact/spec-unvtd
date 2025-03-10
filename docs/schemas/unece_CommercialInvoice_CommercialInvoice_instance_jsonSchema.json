@@ -81,6 +81,16 @@
     "paymentMethod": "The quick brown fox jumps over the lazy dog.",
     "totalInvoiceAmount": "The quick brown fox jumps over the lazy dog.",
     "amount": 3.141579,
-    "currency": "The quick brown fox jumps over the lazy dog."
+    "currency": "The quick brown fox jumps over the lazy dog.",
+    "itemsShipped": {
+      "product": {
+        "id": "https://jargon.sh"
+      },
+      "itemCount": 12345,
+      "netWeight": {
+        "amount": 3.141579,
+        "unit": "The quick brown fox jumps over the lazy dog."
+      }
+    }
   }
 }
