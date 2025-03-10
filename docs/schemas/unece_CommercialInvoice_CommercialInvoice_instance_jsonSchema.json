@@ -8,9 +8,8 @@
     "country": "The quick brown fox jumps over the lazy dog."
   },
   "issuanceDate": "1970-01-01T00:00:00Z",
-  "credentialSubject": {},
   "id": "https://jargon.sh",
-  "vtd-core.CredentialSubject": {
+  "credentialSubject": {
     "purchaseOrderNumber": "The quick brown fox jumps over the lazy dog.",
     "contractNumber": "The quick brown fox jumps over the lazy dog.",
     "invoiceNumber": "The quick brown fox jumps over the lazy dog.",
