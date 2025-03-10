@@ -480,6 +480,22 @@
         }
       },
       "description": ""
+    },
+    "MonetaryAmount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "currency": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
     }
   }
 }
