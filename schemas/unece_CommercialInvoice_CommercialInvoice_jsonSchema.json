@@ -1,0 +1,486 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "issuer": {
+      "$ref": "#/$defs/Party",
+      "description": ""
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": ""
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": ""
+    },
+    "credentialSubject": {
+      "$ref": "#/$defs/Invoice",
+      "description": ""
+    }
+  },
+  "description": "A commercial document which consists of an itemised account of goods or services delivered, together with a demand for payment.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Party": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Party",
+          "enum": [
+            "Party"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Invoice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "purchaseOrderNumber": {
+          "example": "PO1000293",
+          "type": "string",
+          "description": "Identifier assigned by the buyer to an order"
+        },
+        "contractNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "invoiceNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "issueDate": {
+          "type": "string",
+          "format": "date",
+          "description": ""
+        },
+        "invoiceDate": {
+          "type": "string",
+          "format": "date",
+          "description": ""
+        },
+        "paymentDueDate": {
+          "type": "string",
+          "format": "date",
+          "description": ""
+        },
+        "buyer": {
+          "$ref": "#/$defs/Buyer",
+          "description": ""
+        },
+        "invoicee": {
+          "$ref": "#/$defs/Invoicee",
+          "description": ""
+        },
+        "sellersBank": {
+          "$ref": "#/$defs/SellersBank",
+          "description": ""
+        },
+        "documentaryCreditApplicant": {
+          "$ref": "#/$defs/CreditApplicant",
+          "description": ""
+        },
+        "seller": {
+          "$ref": "#/$defs/Seller",
+          "description": ""
+        },
+        "sellerBankAccountNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "originalLoadingLocation": {
+          "$ref": "#/$defs/Location",
+          "description": ""
+        },
+        "originCountry": {
+          "$ref": "#/$defs/Location",
+          "description": ""
+        },
+        "baseportUnloadingLocation": {
+          "type": "string",
+          "description": ""
+        },
+        "tradeTermsConditionsDescription": {
+          "type": "string",
+          "description": ""
+        },
+        "tradeTermsConditionsCode": {
+          "type": "string",
+          "description": ""
+        },
+        "paymentTerms": {
+          "type": "string",
+          "description": ""
+        },
+        "paymentMethod": {
+          "type": "string",
+          "description": ""
+        },
+        "itemsShipped": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TradeLineItem"
+          },
+          "description": ""
+        },
+        "totalAmount": {
+          "$ref": "#/$defs/MonetaryAmount",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Buyer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Buyer",
+          "enum": [
+            "Buyer"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Invoicee": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Invoicee",
+          "enum": [
+            "Invoicee"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "SellersBank": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "SellersBank",
+          "enum": [
+            "SellersBank"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "CreditApplicant": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "CreditApplicant",
+          "enum": [
+            "CreditApplicant"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Seller": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Seller",
+          "enum": [
+            "Seller"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "street": {
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Location": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "street": {
+          "type": "string",
+          "description": ""
+        },
+        "city": {
+          "type": "string",
+          "description": ""
+        },
+        "state": {
+          "type": "string",
+          "description": ""
+        },
+        "zip": {
+          "type": "number",
+          "description": ""
+        },
+        "iataAirportCode": {
+          "type": "string",
+          "description": ""
+        },
+        "unlocode": {
+          "type": "string",
+          "format": "uri",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "TradeLineItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "product": {
+          "$ref": "#/$defs/Product",
+          "description": ""
+        },
+        "sku": {
+          "type": "string",
+          "description": ""
+        },
+        "itemCount": {
+          "type": "number",
+          "description": ""
+        },
+        "netWeight": {
+          "$ref": "#/$defs/Quantity",
+          "description": ""
+        },
+        "grossWeight": {
+          "$ref": "#/$defs/Quantity",
+          "description": ""
+        },
+        "productPrice": {
+          "$ref": "#/$defs/MonetaryAmount",
+          "description": ""
+        },
+        "commodity": {
+          "type": "string",
+          "description": ""
+        },
+        "amount": {
+          "$ref": "#/$defs/MonetaryAmount",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Product": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "example": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique identifier for the product."
+        }
+      },
+      "description": ""
+    },
+    "Quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "example": 22,
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "unit": {
+          "example": "KGS",
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "MonetaryAmount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "example": 2000,
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "currency": {
+          "example": "USD",
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    }
+  }
+}

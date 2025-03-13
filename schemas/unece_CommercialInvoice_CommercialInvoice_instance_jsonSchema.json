@@ -1,0 +1,136 @@
+{
+  "issuer": {
+    "id": "did:web:manufacturer.example.com",
+    "street": "The quick brown fox jumps over the lazy dog.",
+    "city": "The quick brown fox jumps over the lazy dog.",
+    "state": "The quick brown fox jumps over the lazy dog.",
+    "zip": 12345,
+    "country": "The quick brown fox jumps over the lazy dog."
+  },
+  "issuanceDate": "1970-01-01T00:00:00Z",
+  "id": "https://jargon.sh",
+  "credentialSubject": {
+    "purchaseOrderNumber": "PO1000293",
+    "contractNumber": "The quick brown fox jumps over the lazy dog.",
+    "invoiceNumber": "The quick brown fox jumps over the lazy dog.",
+    "issueDate": "1970-01-01",
+    "invoiceDate": "1970-01-01",
+    "paymentDueDate": "1970-01-01",
+    "buyer": {
+      "id": "did:web:manufacturer.example.com",
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "country": "The quick brown fox jumps over the lazy dog."
+    },
+    "invoicee": {
+      "id": "did:web:manufacturer.example.com",
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "country": "The quick brown fox jumps over the lazy dog."
+    },
+    "sellersBank": {
+      "id": "did:web:manufacturer.example.com",
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "country": "The quick brown fox jumps over the lazy dog."
+    },
+    "documentaryCreditApplicant": {
+      "id": "did:web:manufacturer.example.com",
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "country": "The quick brown fox jumps over the lazy dog."
+    },
+    "seller": {
+      "id": "did:web:manufacturer.example.com",
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "country": "The quick brown fox jumps over the lazy dog."
+    },
+    "sellerBankAccountNumber": "The quick brown fox jumps over the lazy dog.",
+    "originalLoadingLocation": {
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "iataAirportCode": "The quick brown fox jumps over the lazy dog.",
+      "unlocode": "https://jargon.sh"
+    },
+    "originCountry": {
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "iataAirportCode": "The quick brown fox jumps over the lazy dog.",
+      "unlocode": "https://jargon.sh"
+    },
+    "baseportUnloadingLocation": "The quick brown fox jumps over the lazy dog.",
+    "tradeTermsConditionsDescription": "The quick brown fox jumps over the lazy dog.",
+    "tradeTermsConditionsCode": "The quick brown fox jumps over the lazy dog.",
+    "paymentTerms": "The quick brown fox jumps over the lazy dog.",
+    "paymentMethod": "The quick brown fox jumps over the lazy dog.",
+    "itemsShipped": [
+      {
+        "product": {
+          "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
+        },
+        "sku": "The quick brown fox jumps over the lazy dog.",
+        "itemCount": 12345,
+        "netWeight": {
+          "amount": 22,
+          "unit": "KGS"
+        },
+        "grossWeight": {
+          "amount": 22,
+          "unit": "KGS"
+        },
+        "productPrice": {
+          "amount": 2000,
+          "currency": "USD"
+        },
+        "commodity": "The quick brown fox jumps over the lazy dog.",
+        "amount": {
+          "amount": 2000,
+          "currency": "USD"
+        }
+      },
+      {
+        "product": {
+          "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
+        },
+        "sku": "The quick brown fox jumps over the lazy dog.",
+        "itemCount": 12345,
+        "netWeight": {
+          "amount": 22,
+          "unit": "KGS"
+        },
+        "grossWeight": {
+          "amount": 22,
+          "unit": "KGS"
+        },
+        "productPrice": {
+          "amount": 2000,
+          "currency": "USD"
+        },
+        "commodity": "The quick brown fox jumps over the lazy dog.",
+        "amount": {
+          "amount": 2000,
+          "currency": "USD"
+        }
+      }
+    ],
+    "totalAmount": {
+      "amount": 2000,
+      "currency": "USD"
+    }
+  }
+}
