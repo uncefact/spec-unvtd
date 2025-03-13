@@ -69,8 +69,9 @@
       "additionalProperties": false,
       "properties": {
         "purchaseOrderNumber": {
+          "example": "PO1000293",
           "type": "string",
-          "description": ""
+          "description": "Identifier assigned by the buyer to an order"
         },
         "contractNumber": {
           "type": "string",
@@ -475,22 +476,6 @@
         },
         "currency": {
           "example": "USD",
-          "type": "string",
-          "description": ""
-        }
-      },
-      "description": ""
-    },
-    "MonetaryAmount": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "amount": {
-          "type": "number",
-          "format": "float",
-          "description": ""
-        },
-        "currency": {
           "type": "string",
           "description": ""
         }
