@@ -1,11 +1,12 @@
 {
   "issuer": {
     "id": "did:web:manufacturer.example.com",
-    "street": "The quick brown fox jumps over the lazy dog.",
-    "city": "The quick brown fox jumps over the lazy dog.",
-    "state": "The quick brown fox jumps over the lazy dog.",
-    "zip": 12345,
-    "country": "The quick brown fox jumps over the lazy dog."
+    "name": "Wave Rider Supplies, Inc",
+    "street": "210 Ocean Road",
+    "city": "Williamsburg",
+    "state": "NSW",
+    "zip": 75002,
+    "country": "AU"
   },
   "issuanceDate": "1970-01-01T00:00:00Z",
   "id": "https://jargon.sh",
@@ -18,43 +19,39 @@
     "paymentDueDate": "2025-04-09",
     "buyer": {
       "id": "did:web:manufacturer.example.com",
-      "street": "The quick brown fox jumps over the lazy dog.",
-      "city": "The quick brown fox jumps over the lazy dog.",
-      "state": "The quick brown fox jumps over the lazy dog.",
-      "zip": 12345,
-      "country": "The quick brown fox jumps over the lazy dog."
+      "name": "Wave Rider Supplies, Inc",
+      "street": "210 Ocean Road",
+      "city": "Williamsburg",
+      "state": "NSW",
+      "zip": 75002,
+      "country": "AU"
     },
     "invoicee": {
       "id": "did:web:manufacturer.example.com",
-      "street": "The quick brown fox jumps over the lazy dog.",
-      "city": "The quick brown fox jumps over the lazy dog.",
-      "state": "The quick brown fox jumps over the lazy dog.",
-      "zip": 12345,
-      "country": "The quick brown fox jumps over the lazy dog."
+      "name": "Wave Rider Supplies, Inc",
+      "street": "210 Ocean Road",
+      "city": "Williamsburg",
+      "state": "NSW",
+      "zip": 75002,
+      "country": "AU"
     },
     "sellersBank": {
       "id": "did:web:manufacturer.example.com",
-      "street": "The quick brown fox jumps over the lazy dog.",
-      "city": "The quick brown fox jumps over the lazy dog.",
-      "state": "The quick brown fox jumps over the lazy dog.",
-      "zip": 12345,
-      "country": "The quick brown fox jumps over the lazy dog."
-    },
-    "documentaryCreditApplicant": {
-      "id": "did:web:manufacturer.example.com",
-      "street": "The quick brown fox jumps over the lazy dog.",
-      "city": "The quick brown fox jumps over the lazy dog.",
-      "state": "The quick brown fox jumps over the lazy dog.",
-      "zip": 12345,
-      "country": "The quick brown fox jumps over the lazy dog."
+      "name": "Wave Rider Supplies, Inc",
+      "street": "210 Ocean Road",
+      "city": "Williamsburg",
+      "state": "NSW",
+      "zip": 75002,
+      "country": "AU"
     },
     "seller": {
       "id": "did:web:manufacturer.example.com",
-      "street": "The quick brown fox jumps over the lazy dog.",
-      "city": "The quick brown fox jumps over the lazy dog.",
-      "state": "The quick brown fox jumps over the lazy dog.",
-      "zip": 12345,
-      "country": "The quick brown fox jumps over the lazy dog."
+      "name": "Wave Rider Supplies, Inc",
+      "street": "210 Ocean Road",
+      "city": "Williamsburg",
+      "state": "NSW",
+      "zip": 75002,
+      "country": "AU"
     },
     "sellerBankAccountNumber": "9876543210",
     "originalLoadingLocation": {
@@ -73,7 +70,6 @@
       "iataAirportCode": "The quick brown fox jumps over the lazy dog.",
       "unlocode": "https://jargon.sh"
     },
-    "baseportUnloadingLocation": "Sydney Port, Australia",
     "tradeTermsConditionsDescription": "FOB Los Angeles Seaport",
     "tradeTermsConditionsCode": "FOB",
     "paymentTerms": "Net 30 days",
@@ -129,10 +125,6 @@
       }
     ],
     "totalAmount": {
-      "amount": 2000,
-      "currency": "USD"
-    },
-    "documentaryCreditAmount": {
       "amount": 2000,
       "currency": "USD"
     }

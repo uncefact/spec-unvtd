@@ -41,28 +41,38 @@
           "format": "uri",
           "description": "A unique party identifier."
         },
+        "name": {
+          "example": "Wave Rider Supplies, Inc",
+          "type": "string",
+          "description": "Trade party name."
+        },
         "street": {
+          "example": "210 Ocean Road",
           "type": "string",
           "description": "The street component of the address"
         },
         "city": {
+          "example": "Williamsburg",
           "type": "string",
           "description": "The city compomnent of the address"
         },
         "state": {
+          "example": "NSW",
           "type": "string",
           "description": "The state component of the address"
         },
         "zip": {
+          "example": 75002,
           "type": "number",
           "description": ""
         },
         "country": {
+          "example": "AU",
           "type": "string",
-          "description": ""
+          "description": "Country."
         }
       },
-      "description": ""
+      "description": "Trade party."
     },
     "Invoice": {
       "type": "object",
@@ -113,10 +123,6 @@
           "$ref": "#/$defs/SellersBank",
           "description": "Bank designated by the seller to receive payment."
         },
-        "documentaryCreditApplicant": {
-          "$ref": "#/$defs/CreditApplicant",
-          "description": "Name and address of the applicant of a documentary credit."
-        },
         "seller": {
           "$ref": "#/$defs/Seller",
           "description": "Party selling merchandise or services to a buyer."
@@ -133,11 +139,6 @@
         "originCountry": {
           "$ref": "#/$defs/Location",
           "description": "Name of the country in which the goods have been produced or manufactured, according to criteria laid down for the application of the Customs tariff or quantitative restrictions, or any measure related to trade."
-        },
-        "baseportUnloadingLocation": {
-          "example": "Sydney Port, Australia",
-          "type": "string",
-          "description": "The place or port at which the cargo is discharged or unloaded from a means of transport according to the transport contract. The goods may or may not be discharged from the main means of transport at this place or port."
         },
         "tradeTermsConditionsDescription": {
           "example": "FOB Los Angeles Seaport",
@@ -169,10 +170,6 @@
         "totalAmount": {
           "$ref": "#/$defs/MonetaryAmount",
           "description": "Total monetary amount charged in respect of one or more invoices."
-        },
-        "documentaryCreditAmount": {
-          "$ref": "#/$defs/MonetaryAmount",
-          "description": "Amount of the documentary credit."
         }
       },
       "description": ""
@@ -194,28 +191,38 @@
           "format": "uri",
           "description": "A unique party identifier."
         },
+        "name": {
+          "example": "Wave Rider Supplies, Inc",
+          "type": "string",
+          "description": "Trade party name."
+        },
         "street": {
+          "example": "210 Ocean Road",
           "type": "string",
           "description": "The street component of the address"
         },
         "city": {
+          "example": "Williamsburg",
           "type": "string",
           "description": "The city compomnent of the address"
         },
         "state": {
+          "example": "NSW",
           "type": "string",
           "description": "The state component of the address"
         },
         "zip": {
+          "example": 75002,
           "type": "number",
           "description": ""
         },
         "country": {
+          "example": "AU",
           "type": "string",
-          "description": ""
+          "description": "Country."
         }
       },
-      "description": ""
+      "description": "Party to which merchandise or services are sold."
     },
     "Invoicee": {
       "type": "object",
@@ -234,28 +241,38 @@
           "format": "uri",
           "description": "A unique party identifier."
         },
+        "name": {
+          "example": "Wave Rider Supplies, Inc",
+          "type": "string",
+          "description": "Trade party name."
+        },
         "street": {
+          "example": "210 Ocean Road",
           "type": "string",
           "description": "The street component of the address"
         },
         "city": {
+          "example": "Williamsburg",
           "type": "string",
           "description": "The city compomnent of the address"
         },
         "state": {
+          "example": "NSW",
           "type": "string",
           "description": "The state component of the address"
         },
         "zip": {
+          "example": 75002,
           "type": "number",
           "description": ""
         },
         "country": {
+          "example": "AU",
           "type": "string",
-          "description": ""
+          "description": "Country."
         }
       },
-      "description": ""
+      "description": "Party to whom an invoice is issued."
     },
     "SellersBank": {
       "type": "object",
@@ -274,68 +291,38 @@
           "format": "uri",
           "description": "A unique party identifier."
         },
+        "name": {
+          "example": "Wave Rider Supplies, Inc",
+          "type": "string",
+          "description": "Trade party name."
+        },
         "street": {
+          "example": "210 Ocean Road",
           "type": "string",
           "description": "The street component of the address"
         },
         "city": {
+          "example": "Williamsburg",
           "type": "string",
           "description": "The city compomnent of the address"
         },
         "state": {
+          "example": "NSW",
           "type": "string",
           "description": "The state component of the address"
         },
         "zip": {
+          "example": 75002,
           "type": "number",
           "description": ""
         },
         "country": {
+          "example": "AU",
           "type": "string",
-          "description": ""
+          "description": "Country."
         }
       },
-      "description": ""
-    },
-    "CreditApplicant": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "type": {
-          "type": "string",
-          "default": "CreditApplicant",
-          "enum": [
-            "CreditApplicant"
-          ]
-        },
-        "id": {
-          "example": "did:web:manufacturer.example.com",
-          "type": "string",
-          "format": "uri",
-          "description": "A unique party identifier."
-        },
-        "street": {
-          "type": "string",
-          "description": "The street component of the address"
-        },
-        "city": {
-          "type": "string",
-          "description": "The city compomnent of the address"
-        },
-        "state": {
-          "type": "string",
-          "description": "The state component of the address"
-        },
-        "zip": {
-          "type": "number",
-          "description": ""
-        },
-        "country": {
-          "type": "string",
-          "description": ""
-        }
-      },
-      "description": ""
+      "description": "Bank designated by the seller to receive payment."
     },
     "Seller": {
       "type": "object",
@@ -354,28 +341,38 @@
           "format": "uri",
           "description": "A unique party identifier."
         },
+        "name": {
+          "example": "Wave Rider Supplies, Inc",
+          "type": "string",
+          "description": "Trade party name."
+        },
         "street": {
+          "example": "210 Ocean Road",
           "type": "string",
           "description": "The street component of the address"
         },
         "city": {
+          "example": "Williamsburg",
           "type": "string",
           "description": "The city compomnent of the address"
         },
         "state": {
+          "example": "NSW",
           "type": "string",
           "description": "The state component of the address"
         },
         "zip": {
+          "example": 75002,
           "type": "number",
           "description": ""
         },
         "country": {
+          "example": "AU",
           "type": "string",
-          "description": ""
+          "description": "Country."
         }
       },
-      "description": ""
+      "description": "Party selling merchandise or services to a buyer."
     },
     "Location": {
       "type": "object",
