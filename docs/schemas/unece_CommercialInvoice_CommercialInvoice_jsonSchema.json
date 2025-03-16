@@ -71,82 +71,93 @@
         "purchaseOrderNumber": {
           "example": "PO1000293",
           "type": "string",
-          "description": "Identifier assigned by the buyer to an order"
+          "description": "Identifier assigned by the buyer to an order."
         },
         "contractNumber": {
+          "example": "PO1000293",
           "type": "string",
-          "description": ""
+          "description": "Identifier of a contract concluded between parties such as between buyer and seller."
         },
         "invoiceNumber": {
+          "example": "INV-2024031-001",
           "type": "string",
-          "description": ""
+          "description": "Reference number to identify an invoice."
         },
         "issueDate": {
+          "example": "2025-03-10",
           "type": "string",
           "format": "date",
-          "description": ""
+          "description": "Date that a document was issued and when appropriate, signed or otherwise authenticated."
         },
         "invoiceDate": {
+          "example": "2025-03-10",
           "type": "string",
           "format": "date",
-          "description": ""
+          "description": "Date of issue of an invoice."
         },
         "paymentDueDate": {
+          "example": "2025-04-09",
           "type": "string",
           "format": "date",
-          "description": ""
+          "description": "Date when an amount due should be made available to the creditor under the terms of payment."
         },
         "buyer": {
           "$ref": "#/$defs/Buyer",
-          "description": ""
+          "description": "Party to which merchandise or services are sold."
         },
         "invoicee": {
           "$ref": "#/$defs/Invoicee",
-          "description": ""
+          "description": "Party to whom an invoice is issued."
         },
         "sellersBank": {
           "$ref": "#/$defs/SellersBank",
-          "description": ""
+          "description": "Bank designated by the seller to receive payment."
         },
         "documentaryCreditApplicant": {
           "$ref": "#/$defs/CreditApplicant",
-          "description": ""
+          "description": "Name and address of the applicant of a documentary credit."
         },
         "seller": {
           "$ref": "#/$defs/Seller",
-          "description": ""
+          "description": "Party selling merchandise or services to a buyer."
         },
         "sellerBankAccountNumber": {
+          "example": 9876543210,
           "type": "string",
-          "description": ""
+          "description": "Identifier of an account with the bank designated to receive payment."
         },
         "originalLoadingLocation": {
           "$ref": "#/$defs/Location",
-          "description": ""
+          "description": "Seaport, airport, freight terminal, rail station or other location where the goods were first loaded onto the means of transport being utilised for their carriage."
         },
         "originCountry": {
           "$ref": "#/$defs/Location",
-          "description": ""
+          "description": "Name of the country in which the goods have been produced or manufactured, according to criteria laid down for the application of the Customs tariff or quantitative restrictions, or any measure related to trade."
         },
         "baseportUnloadingLocation": {
+          "example": "Sydney Port, Australia",
           "type": "string",
-          "description": ""
+          "description": "The place or port at which the cargo is discharged or unloaded from a means of transport according to the transport contract. The goods may or may not be discharged from the main means of transport at this place or port."
         },
         "tradeTermsConditionsDescription": {
+          "example": "FOB Los Angeles Seaport",
           "type": "string",
-          "description": ""
+          "description": "Free form description of delivery or transport terms (Incoterms)."
         },
         "tradeTermsConditionsCode": {
+          "example": "FOB",
           "type": "string",
-          "description": ""
+          "description": "Code specifying the delivery or transport terms (Incoterms)."
         },
         "paymentTerms": {
+          "example": "Net 30 days",
           "type": "string",
-          "description": ""
+          "description": "Identification of the terms of payment between the parties to a transaction (generic term)."
         },
         "paymentMethod": {
+          "example": "Wire Transfer",
           "type": "string",
-          "description": ""
+          "description": "Code specifying a method of payment."
         },
         "itemsShipped": {
           "type": "array",
@@ -157,7 +168,11 @@
         },
         "totalAmount": {
           "$ref": "#/$defs/MonetaryAmount",
-          "description": ""
+          "description": "Total monetary amount charged in respect of one or more invoices."
+        },
+        "documentaryCreditAmount": {
+          "$ref": "#/$defs/MonetaryAmount",
+          "description": "Amount of the documentary credit."
         }
       },
       "description": ""
@@ -400,7 +415,7 @@
       "properties": {
         "product": {
           "$ref": "#/$defs/Product",
-          "description": ""
+          "description": "Plain language description of the nature of a goods item sufficient to identify it for customs, statistical or transport purposes."
         },
         "sku": {
           "type": "string",
@@ -412,7 +427,7 @@
         },
         "netWeight": {
           "$ref": "#/$defs/Quantity",
-          "description": ""
+          "description": "Total net weight (mass) of all the goods items referred to as one consignment."
         },
         "grossWeight": {
           "$ref": "#/$defs/Quantity",
@@ -423,8 +438,9 @@
           "description": ""
         },
         "commodity": {
+          "example": 950629,
           "type": "string",
-          "description": ""
+          "description": "Code specifying a type of goods for Customs, transport or statistical purposes (generic term)."
         },
         "amount": {
           "$ref": "#/$defs/MonetaryAmount",
