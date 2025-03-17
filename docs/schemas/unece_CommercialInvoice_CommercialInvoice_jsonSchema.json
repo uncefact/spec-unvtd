@@ -123,6 +123,10 @@
           "$ref": "#/$defs/SellersBank",
           "description": "Bank designated by the seller to receive payment."
         },
+        "documentaryCreditApplicant": {
+          "$ref": "#/$defs/DocumentaryCreditApplicant",
+          "description": "Name and address of the applicant of a documentary credit."
+        },
         "seller": {
           "$ref": "#/$defs/Seller",
           "description": "Party selling merchandise or services to a buyer."
@@ -292,7 +296,7 @@
           "description": "A unique party identifier."
         },
         "name": {
-          "example": "Wave Rider Supplies, Inc",
+          "example": "Pacific Trade Bank",
           "type": "string",
           "description": "Trade party name."
         },
@@ -324,6 +328,56 @@
       },
       "description": "Bank designated by the seller to receive payment."
     },
+    "DocumentaryCreditApplicant": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "DocumentaryCreditApplicant",
+          "enum": [
+            "DocumentaryCreditApplicant"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "name": {
+          "example": "OceanWave Retailers Ltd.",
+          "type": "string",
+          "description": "Trade party name."
+        },
+        "street": {
+          "example": "210 Ocean Road",
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "example": "Williamsburg",
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "example": "NSW",
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "example": 75002,
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "example": "AU",
+          "type": "string",
+          "description": "Country."
+        }
+      },
+      "description": "Trade party."
+    },
     "Seller": {
       "type": "object",
       "additionalProperties": false,
@@ -342,7 +396,7 @@
           "description": "A unique party identifier."
         },
         "name": {
-          "example": "Wave Rider Supplies, Inc",
+          "example": "SurfPro Manufacturing Inc.",
           "type": "string",
           "description": "Trade party name."
         },
@@ -415,10 +469,12 @@
           "description": "Plain language description of the nature of a goods item sufficient to identify it for customs, statistical or transport purposes."
         },
         "sku": {
+          "example": 1000826518,
           "type": "string",
           "description": ""
         },
         "itemCount": {
+          "example": 200,
           "type": "number",
           "description": ""
         },
@@ -435,7 +491,7 @@
           "description": ""
         },
         "commodity": {
-          "example": 950629,
+          "example": 950630,
           "type": "string",
           "description": "Code specifying a type of goods for Customs, transport or statistical purposes (generic term)."
         },
@@ -444,7 +500,7 @@
           "description": ""
         }
       },
-      "description": ""
+      "description": "A collection of information specific to an item being used or reported on for supply chain trade purposes."
     },
     "Product": {
       "type": "object",
