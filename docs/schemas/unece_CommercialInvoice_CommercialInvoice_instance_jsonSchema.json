@@ -37,7 +37,16 @@
     },
     "sellersBank": {
       "id": "did:web:manufacturer.example.com",
-      "name": "Wave Rider Supplies, Inc",
+      "name": "Pacific Trade Bank",
+      "street": "210 Ocean Road",
+      "city": "Williamsburg",
+      "state": "NSW",
+      "zip": 75002,
+      "country": "AU"
+    },
+    "documentaryCreditApplicant": {
+      "id": "did:web:manufacturer.example.com",
+      "name": "OceanWave Retailers Ltd.",
       "street": "210 Ocean Road",
       "city": "Williamsburg",
       "state": "NSW",
@@ -46,7 +55,7 @@
     },
     "seller": {
       "id": "did:web:manufacturer.example.com",
-      "name": "Wave Rider Supplies, Inc",
+      "name": "SurfPro Manufacturing Inc.",
       "street": "210 Ocean Road",
       "city": "Williamsburg",
       "state": "NSW",
@@ -79,8 +88,8 @@
         "product": {
           "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
         },
-        "sku": "",
-        "itemCount": "",
+        "sku": "1000826518",
+        "itemCount": 200,
         "netWeight": {
           "amount": 22,
           "unit": "KGS"
@@ -93,7 +102,7 @@
           "amount": 2000,
           "currency": "USD"
         },
-        "commodity": "950629",
+        "commodity": "950630",
         "amount": {
           "amount": 2000,
           "currency": "USD"
@@ -103,8 +112,8 @@
         "product": {
           "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
         },
-        "sku": "",
-        "itemCount": "",
+        "sku": "1000826518",
+        "itemCount": 200,
         "netWeight": {
           "amount": 22,
           "unit": "KGS"
@@ -117,7 +126,7 @@
           "amount": 2000,
           "currency": "USD"
         },
-        "commodity": "950629",
+        "commodity": "950630",
         "amount": {
           "amount": 2000,
           "currency": "USD"
