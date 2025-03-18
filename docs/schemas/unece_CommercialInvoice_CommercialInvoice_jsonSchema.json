@@ -474,7 +474,6 @@
           "description": ""
         },
         "itemCount": {
-          "example": 200,
           "type": "number",
           "description": ""
         },
