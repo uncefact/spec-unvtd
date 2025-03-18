@@ -89,7 +89,7 @@
           "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
         },
         "sku": "1000826518",
-        "itemCount": 200,
+        "itemCount": 12345,
         "netWeight": {
           "amount": 22,
           "unit": "KGS"
@@ -105,7 +105,7 @@
         "commodity": "950630",
         "amount": {
           "amount": 2000,
-          "currency": "USD"
+          "currency": "AUD"
         }
       },
       {
@@ -113,7 +113,7 @@
           "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
         },
         "sku": "1000826518",
-        "itemCount": 200,
+        "itemCount": 220,
         "netWeight": {
           "amount": 22,
           "unit": "KGS"
@@ -129,7 +129,7 @@
         "commodity": "950630",
         "amount": {
           "amount": 2000,
-          "currency": "USD"
+          "currency": "AUD"
         }
       }
     ],
