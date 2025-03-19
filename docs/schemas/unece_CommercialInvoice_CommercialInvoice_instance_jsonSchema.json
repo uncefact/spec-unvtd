@@ -8,7 +8,6 @@
     "zip": 75002,
     "country": "AU"
   },
-  "issuanceDate": "1970-01-01T00:00:00Z",
   "id": "https://jargon.sh",
   "credentialSubject": {
     "purchaseOrderNumber": "PO1000293",
@@ -38,10 +37,10 @@
     "sellersBank": {
       "id": "did:web:manufacturer.example.com",
       "name": "Pacific Trade Bank",
-      "street": "210 Ocean Road",
-      "city": "Williamsburg",
-      "state": "NSW",
-      "zip": 75002,
+      "street": "340 Main",
+      "city": "Rileigh",
+      "state": "NSE",
+      "zip": 29110,
       "country": "AU"
     },
     "documentaryCreditApplicant": {
@@ -86,56 +85,61 @@
     "itemsShipped": [
       {
         "product": {
-          "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
+          "id": "https://surfpro.example.com/boards/6footie",
+          "name": "Coast 6 Footie",
+          "description": "6ft PU surfboards"
         },
-        "sku": "1000826518",
-        "itemCount": 12345,
+        "sku": "100023412",
+        "itemCount": "200",
         "netWeight": {
-          "amount": 22,
+          "amount": "1200",
           "unit": "KGS"
         },
         "grossWeight": {
-          "amount": 22,
+          "amount": "1340",
           "unit": "KGS"
         },
         "productPrice": {
-          "amount": 2000,
-          "currency": "USD"
+          "amount": "210",
+          "currency": "AUD"
         },
-        "commodity": "950630",
-        "amount": {
-          "amount": 2000,
+        "commodity": "934510",
+        "price": {
+          "amount": "42000",
           "currency": "AUD"
         }
       },
       {
         "product": {
-          "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
+          "id": "https://surfpro.example.com/boards/7footie",
+          "name": "Coast 7 Footie",
+          "description": "7ft PU surfboards"
         },
-        "sku": "1000826518",
-        "itemCount": 220,
+        "sku": "100023412",
+        "itemCount": "260",
         "netWeight": {
-          "amount": 22,
+          "amount": "1280",
           "unit": "KGS"
         },
         "grossWeight": {
-          "amount": 22,
+          "amount": "1440",
           "unit": "KGS"
         },
         "productPrice": {
-          "amount": 2000,
-          "currency": "USD"
+          "amount": "218",
+          "currency": "AUD"
         },
-        "commodity": "950630",
-        "amount": {
-          "amount": 2000,
+        "commodity": "934510",
+        "price": {
+          "amount": "56680",
           "currency": "AUD"
         }
       }
     ],
     "totalAmount": {
-      "amount": 2000,
-      "currency": "USD"
+      "amount": "98680",
+      "currency": "AUD"
     }
-  }
+  },
+  "validFrom": "2025-03-06:10:00"
 }
