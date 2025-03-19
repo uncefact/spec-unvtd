@@ -12,7 +12,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
+      
+      - name: Set Git user
+        run: |
+          git config --global user.name "Nis Jespersen"
+          git config --global user.email "nissimsan@users.noreply.github.com"
+      
       - name: Create a new branch
         run: |
           BRANCH_NAME="release-${{ github.event.client_payload.release.index }}-${{ github.run_id }}"
@@ -51,10 +56,10 @@ jobs:
           
           echo "Adding and committing downloaded files..."
           git add docs/schemas
-          git commit -m "Add JSON schema files from release repository_dispatch event"
+          git commit -m "Add JSON schema files from release repository_dispatch event" --author="Nis Jespersen <nissimsan@users.noreply.github.com>"
       - name: Push branch
         env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           BRANCH_NAME="release-${{ github.event.client_payload.release.index }}-${{ github.run_id }}"
           echo "Pushing branch $BRANCH_NAME"
