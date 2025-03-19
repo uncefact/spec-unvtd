@@ -494,7 +494,7 @@
           "type": "string",
           "description": "Code specifying a type of goods for Customs, transport or statistical purposes (generic term)."
         },
-        "amount": {
+        "price": {
           "$ref": "#/$defs/MonetaryAmount",
           "description": ""
         }
@@ -510,6 +510,14 @@
           "type": "string",
           "format": "uri",
           "description": "A unique identifier for the product."
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "description": {
+          "type": "string",
+          "description": ""
         }
       },
       "description": ""

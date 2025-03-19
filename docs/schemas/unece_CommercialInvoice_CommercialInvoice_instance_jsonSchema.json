@@ -86,10 +86,12 @@
     "itemsShipped": [
       {
         "product": {
-          "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
+          "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f",
+          "name": "Coast 6 Footie",
+          "description": "6ft PU surfboards"
         },
         "sku": "1000826518",
-        "itemCount": 12345,
+        "itemCount": 40,
         "netWeight": {
           "amount": 22,
           "unit": "KGS"
@@ -103,17 +105,19 @@
           "currency": "USD"
         },
         "commodity": "950630",
-        "amount": {
-          "amount": 2000,
-          "currency": "AUD"
+        "price": {
+          "amount": 8700,
+          "currency": "DKK"
         }
       },
       {
         "product": {
-          "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f"
+          "id": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f",
+          "name": "Coast 7 Footie",
+          "description": "7ft PU surfboards"
         },
         "sku": "1000826518",
-        "itemCount": 220,
+        "itemCount": 50,
         "netWeight": {
           "amount": 22,
           "unit": "KGS"
@@ -127,9 +131,9 @@
           "currency": "USD"
         },
         "commodity": "950630",
-        "amount": {
-          "amount": 2000,
-          "currency": "AUD"
+        "price": {
+          "amount": 9000,
+          "currency": "SEK"
         }
       }
     ],
