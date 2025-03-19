@@ -6,11 +6,6 @@
       "$ref": "#/$defs/Party",
       "description": ""
     },
-    "issuanceDate": {
-      "type": "string",
-      "format": "date-time",
-      "description": ""
-    },
     "id": {
       "type": "string",
       "format": "uri",
@@ -18,6 +13,12 @@
     },
     "credentialSubject": {
       "$ref": "#/$defs/Invoice",
+      "description": ""
+    },
+    "validFrom": {
+      "example": "2025-03-06:10:00",
+      "type": "string",
+      "format": "date-time",
       "description": ""
     }
   },
@@ -301,22 +302,22 @@
           "description": "Trade party name."
         },
         "street": {
-          "example": "210 Ocean Road",
+          "example": "340 Main",
           "type": "string",
           "description": "The street component of the address"
         },
         "city": {
-          "example": "Williamsburg",
+          "example": "Rileigh",
           "type": "string",
           "description": "The city compomnent of the address"
         },
         "state": {
-          "example": "NSW",
+          "example": "NSE",
           "type": "string",
           "description": "The state component of the address"
         },
         "zip": {
-          "example": 75002,
+          "example": 29110,
           "type": "number",
           "description": ""
         },
@@ -494,7 +495,7 @@
           "type": "string",
           "description": "Code specifying a type of goods for Customs, transport or statistical purposes (generic term)."
         },
-        "amount": {
+        "price": {
           "$ref": "#/$defs/MonetaryAmount",
           "description": ""
         }
@@ -510,6 +511,14 @@
           "type": "string",
           "format": "uri",
           "description": "A unique identifier for the product."
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "description": {
+          "type": "string",
+          "description": ""
         }
       },
       "description": ""
