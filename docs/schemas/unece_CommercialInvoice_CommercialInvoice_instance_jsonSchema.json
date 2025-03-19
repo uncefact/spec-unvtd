@@ -43,15 +43,6 @@
       "zip": 29110,
       "country": "AU"
     },
-    "documentaryCreditApplicant": {
-      "id": "did:web:manufacturer.example.com",
-      "name": "OceanWave Retailers Ltd.",
-      "street": "210 Ocean Road",
-      "city": "Williamsburg",
-      "state": "NSW",
-      "zip": 75002,
-      "country": "AU"
-    },
     "seller": {
       "id": "did:web:manufacturer.example.com",
       "name": "SurfPro Manufacturing Inc.",

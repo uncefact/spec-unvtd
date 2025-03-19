@@ -124,10 +124,6 @@
           "$ref": "#/$defs/SellersBank",
           "description": "Bank designated by the seller to receive payment."
         },
-        "documentaryCreditApplicant": {
-          "$ref": "#/$defs/DocumentaryCreditApplicant",
-          "description": "Name and address of the applicant of a documentary credit."
-        },
         "seller": {
           "$ref": "#/$defs/Seller",
           "description": "Party selling merchandise or services to a buyer."
@@ -328,56 +324,6 @@
         }
       },
       "description": "Bank designated by the seller to receive payment."
-    },
-    "DocumentaryCreditApplicant": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "type": {
-          "type": "string",
-          "default": "DocumentaryCreditApplicant",
-          "enum": [
-            "DocumentaryCreditApplicant"
-          ]
-        },
-        "id": {
-          "example": "did:web:manufacturer.example.com",
-          "type": "string",
-          "format": "uri",
-          "description": "A unique party identifier."
-        },
-        "name": {
-          "example": "OceanWave Retailers Ltd.",
-          "type": "string",
-          "description": "Trade party name."
-        },
-        "street": {
-          "example": "210 Ocean Road",
-          "type": "string",
-          "description": "The street component of the address"
-        },
-        "city": {
-          "example": "Williamsburg",
-          "type": "string",
-          "description": "The city compomnent of the address"
-        },
-        "state": {
-          "example": "NSW",
-          "type": "string",
-          "description": "The state component of the address"
-        },
-        "zip": {
-          "example": 75002,
-          "type": "number",
-          "description": ""
-        },
-        "country": {
-          "example": "AU",
-          "type": "string",
-          "description": "Country."
-        }
-      },
-      "description": "Trade party."
     },
     "Seller": {
       "type": "object",
