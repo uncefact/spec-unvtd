@@ -1,0 +1,36 @@
+{
+  "issuer": {
+    "id": "https://jargon.sh",
+    "address": {
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345
+    }
+  },
+  "issuanceDate": "1970-01-01T00:00:00Z",
+  "credentialSubject": {
+    "id": "https://jargon.sh",
+    "billOfLadingNumber": "The quick brown fox jumps over the lazy dog.",
+    "bookingNumber[]": "The quick brown fox jumps over the lazy dog.",
+    "shipper": {
+      "id": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "consignee": {
+      "id": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "shippingDate": "1970-01-01"
+  }
+}

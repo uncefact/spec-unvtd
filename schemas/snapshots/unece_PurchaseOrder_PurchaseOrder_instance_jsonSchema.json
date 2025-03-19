@@ -1,0 +1,99 @@
+{
+  "issuer": {
+    "id": "https://jargon.sh",
+    "address": {
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345
+    }
+  },
+  "issuanceDate": "1970-01-01T00:00:00Z",
+  "credentialSubject": {
+    "purchaseOrderNumber": "The quick brown fox jumps over the lazy dog.",
+    "contractNumber": "The quick brown fox jumps over the lazy dog.",
+    "orderDate": "1970-01-01",
+    "deliveryDate": "1970-01-01",
+    "buyer": {
+      "id": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "invoicee": {
+      "id": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "shipToParty": {
+      "id": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "seller": {
+      "id": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "placeOfDelivery": {
+      "unlocode": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "originCountry": {
+      "unlocode": "https://jargon.sh",
+      "address": {
+        "street": "The quick brown fox jumps over the lazy dog.",
+        "city": "The quick brown fox jumps over the lazy dog.",
+        "state": "The quick brown fox jumps over the lazy dog.",
+        "zip": 12345
+      }
+    },
+    "paymentTerms": {
+      "terms": "The quick brown fox jumps over the lazy dog."
+    },
+    "paymentMethod": {
+      "terms": "The quick brown fox jumps over the lazy dog."
+    },
+    "unitPrice": {
+      "amount": 3.141579,
+      "currency": "The quick brown fox jumps over the lazy dog."
+    },
+    "allowance": {
+      "amount": 3.141579,
+      "currency": "The quick brown fox jumps over the lazy dog."
+    },
+    "orderAmount": {
+      "amount": 3.141579,
+      "currency": "The quick brown fox jumps over the lazy dog."
+    },
+    "taxAmount": {
+      "amount": 3.141579,
+      "currency": "The quick brown fox jumps over the lazy dog."
+    },
+    "productIdentifier": "https://jargon.sh",
+    "quantityOrdered": {
+      "amount": 3.141579,
+      "unit": "The quick brown fox jumps over the lazy dog."
+    }
+  }
+}

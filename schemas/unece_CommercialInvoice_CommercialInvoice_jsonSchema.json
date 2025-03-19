@@ -1,0 +1,509 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "issuer": {
+      "$ref": "#/$defs/Party",
+      "description": ""
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": ""
+    },
+    "credentialSubject": {
+      "$ref": "#/$defs/Invoice",
+      "description": ""
+    },
+    "validFrom": {
+      "example": "2025-03-06:10:00",
+      "type": "string",
+      "format": "date-time",
+      "description": ""
+    }
+  },
+  "description": "A commercial document which consists of an itemised account of goods or services delivered, together with a demand for payment.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Party": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Party",
+          "enum": [
+            "Party"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "name": {
+          "example": "Wave Rider Supplies, Inc",
+          "type": "string",
+          "description": "Trade party name."
+        },
+        "street": {
+          "example": "210 Ocean Road",
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "example": "Williamsburg",
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "example": "NSW",
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "example": 75002,
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "example": "AU",
+          "type": "string",
+          "description": "Country."
+        }
+      },
+      "description": "Trade party."
+    },
+    "Invoice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "purchaseOrderNumber": {
+          "example": "PO1000293",
+          "type": "string",
+          "description": "Identifier assigned by the buyer to an order."
+        },
+        "contractNumber": {
+          "example": "PO1000293",
+          "type": "string",
+          "description": "Identifier of a contract concluded between parties such as between buyer and seller."
+        },
+        "invoiceNumber": {
+          "example": "INV-2024031-001",
+          "type": "string",
+          "description": "Reference number to identify an invoice."
+        },
+        "issueDate": {
+          "example": "2025-03-10",
+          "type": "string",
+          "format": "date",
+          "description": "Date that a document was issued and when appropriate, signed or otherwise authenticated."
+        },
+        "invoiceDate": {
+          "example": "2025-03-10",
+          "type": "string",
+          "format": "date",
+          "description": "Date of issue of an invoice."
+        },
+        "paymentDueDate": {
+          "example": "2025-04-09",
+          "type": "string",
+          "format": "date",
+          "description": "Date when an amount due should be made available to the creditor under the terms of payment."
+        },
+        "buyer": {
+          "$ref": "#/$defs/Buyer",
+          "description": "Party to which merchandise or services are sold."
+        },
+        "invoicee": {
+          "$ref": "#/$defs/Invoicee",
+          "description": "Party to whom an invoice is issued."
+        },
+        "sellersBank": {
+          "$ref": "#/$defs/SellersBank",
+          "description": "Bank designated by the seller to receive payment."
+        },
+        "seller": {
+          "$ref": "#/$defs/Seller",
+          "description": "Party selling merchandise or services to a buyer."
+        },
+        "sellerBankAccountNumber": {
+          "example": 9876543210,
+          "type": "string",
+          "description": "Identifier of an account with the bank designated to receive payment."
+        },
+        "originalLoadingLocation": {
+          "$ref": "#/$defs/Location",
+          "description": "Seaport, airport, freight terminal, rail station or other location where the goods were first loaded onto the means of transport being utilised for their carriage."
+        },
+        "originCountry": {
+          "$ref": "#/$defs/Location",
+          "description": "Name of the country in which the goods have been produced or manufactured, according to criteria laid down for the application of the Customs tariff or quantitative restrictions, or any measure related to trade."
+        },
+        "tradeTermsConditionsDescription": {
+          "example": "FOB Los Angeles Seaport",
+          "type": "string",
+          "description": "Free form description of delivery or transport terms (Incoterms)."
+        },
+        "tradeTermsConditionsCode": {
+          "example": "FOB",
+          "type": "string",
+          "description": "Code specifying the delivery or transport terms (Incoterms)."
+        },
+        "paymentTerms": {
+          "example": "Net 30 days",
+          "type": "string",
+          "description": "Identification of the terms of payment between the parties to a transaction (generic term)."
+        },
+        "paymentMethod": {
+          "example": "Wire Transfer",
+          "type": "string",
+          "description": "Code specifying a method of payment."
+        },
+        "itemsShipped": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TradeLineItem"
+          },
+          "description": ""
+        },
+        "totalAmount": {
+          "$ref": "#/$defs/MonetaryAmount",
+          "description": "Total monetary amount charged in respect of one or more invoices."
+        }
+      },
+      "description": ""
+    },
+    "Buyer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Buyer",
+          "enum": [
+            "Buyer"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "name": {
+          "example": "Wave Rider Supplies, Inc",
+          "type": "string",
+          "description": "Trade party name."
+        },
+        "street": {
+          "example": "210 Ocean Road",
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "example": "Williamsburg",
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "example": "NSW",
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "example": 75002,
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "example": "AU",
+          "type": "string",
+          "description": "Country."
+        }
+      },
+      "description": "Party to which merchandise or services are sold."
+    },
+    "Invoicee": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Invoicee",
+          "enum": [
+            "Invoicee"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "name": {
+          "example": "Wave Rider Supplies, Inc",
+          "type": "string",
+          "description": "Trade party name."
+        },
+        "street": {
+          "example": "210 Ocean Road",
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "example": "Williamsburg",
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "example": "NSW",
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "example": 75002,
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "example": "AU",
+          "type": "string",
+          "description": "Country."
+        }
+      },
+      "description": "Party to whom an invoice is issued."
+    },
+    "SellersBank": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "SellersBank",
+          "enum": [
+            "SellersBank"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "name": {
+          "example": "Pacific Trade Bank",
+          "type": "string",
+          "description": "Trade party name."
+        },
+        "street": {
+          "example": "340 Main",
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "example": "Rileigh",
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "example": "NSE",
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "example": 29110,
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "example": "AU",
+          "type": "string",
+          "description": "Country."
+        }
+      },
+      "description": "Bank designated by the seller to receive payment."
+    },
+    "Seller": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "Seller",
+          "enum": [
+            "Seller"
+          ]
+        },
+        "id": {
+          "example": "did:web:manufacturer.example.com",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique party identifier."
+        },
+        "name": {
+          "example": "SurfPro Manufacturing Inc.",
+          "type": "string",
+          "description": "Trade party name."
+        },
+        "street": {
+          "example": "210 Ocean Road",
+          "type": "string",
+          "description": "The street component of the address"
+        },
+        "city": {
+          "example": "Williamsburg",
+          "type": "string",
+          "description": "The city compomnent of the address"
+        },
+        "state": {
+          "example": "NSW",
+          "type": "string",
+          "description": "The state component of the address"
+        },
+        "zip": {
+          "example": 75002,
+          "type": "number",
+          "description": ""
+        },
+        "country": {
+          "example": "AU",
+          "type": "string",
+          "description": "Country."
+        }
+      },
+      "description": "Party selling merchandise or services to a buyer."
+    },
+    "Location": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "street": {
+          "type": "string",
+          "description": ""
+        },
+        "city": {
+          "type": "string",
+          "description": ""
+        },
+        "state": {
+          "type": "string",
+          "description": ""
+        },
+        "zip": {
+          "type": "number",
+          "description": ""
+        },
+        "iataAirportCode": {
+          "type": "string",
+          "description": ""
+        },
+        "unlocode": {
+          "type": "string",
+          "format": "uri",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "TradeLineItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "product": {
+          "$ref": "#/$defs/Product",
+          "description": "Plain language description of the nature of a goods item sufficient to identify it for customs, statistical or transport purposes."
+        },
+        "sku": {
+          "example": 1000826518,
+          "type": "string",
+          "description": ""
+        },
+        "itemCount": {
+          "type": "number",
+          "description": ""
+        },
+        "netWeight": {
+          "$ref": "#/$defs/Quantity",
+          "description": "Total net weight (mass) of all the goods items referred to as one consignment."
+        },
+        "grossWeight": {
+          "$ref": "#/$defs/Quantity",
+          "description": ""
+        },
+        "productPrice": {
+          "$ref": "#/$defs/MonetaryAmount",
+          "description": ""
+        },
+        "commodity": {
+          "example": 950630,
+          "type": "string",
+          "description": "Code specifying a type of goods for Customs, transport or statistical purposes (generic term)."
+        },
+        "price": {
+          "$ref": "#/$defs/MonetaryAmount",
+          "description": ""
+        }
+      },
+      "description": "A collection of information specific to an item being used or reported on for supply chain trade purposes."
+    },
+    "Product": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "example": "urn:uuid:e9bf65a3-9ff3-4988-8c44-2535b949279f",
+          "type": "string",
+          "format": "uri",
+          "description": "A unique identifier for the product."
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "description": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "Quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "example": 22,
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "unit": {
+          "example": "KGS",
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    },
+    "MonetaryAmount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "example": 2000,
+          "type": "number",
+          "format": "float",
+          "description": ""
+        },
+        "currency": {
+          "example": "USD",
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": ""
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "issuer": {
+    "id": "did:web:manufacturer.example.com",
+    "name": "Wave Rider Supplies, Inc",
+    "street": "210 Ocean Road",
+    "city": "Williamsburg",
+    "state": "NSW",
+    "zip": 75002,
+    "country": "AU"
+  },
+  "id": "https://jargon.sh",
+  "credentialSubject": {
+    "purchaseOrderNumber": "PO1000293",
+    "contractNumber": "PO1000293",
+    "invoiceNumber": "INV-2024031-001",
+    "issueDate": "2025-03-10",
+    "invoiceDate": "2025-03-10",
+    "paymentDueDate": "2025-04-09",
+    "buyer": {
+      "id": "did:web:manufacturer.example.com",
+      "name": "Wave Rider Supplies, Inc",
+      "street": "210 Ocean Road",
+      "city": "Williamsburg",
+      "state": "NSW",
+      "zip": 75002,
+      "country": "AU"
+    },
+    "invoicee": {
+      "id": "did:web:manufacturer.example.com",
+      "name": "Wave Rider Supplies, Inc",
+      "street": "210 Ocean Road",
+      "city": "Williamsburg",
+      "state": "NSW",
+      "zip": 75002,
+      "country": "AU"
+    },
+    "sellersBank": {
+      "id": "did:web:manufacturer.example.com",
+      "name": "Pacific Trade Bank",
+      "street": "340 Main",
+      "city": "Rileigh",
+      "state": "NSE",
+      "zip": 29110,
+      "country": "AU"
+    },
+    "seller": {
+      "id": "did:web:manufacturer.example.com",
+      "name": "SurfPro Manufacturing Inc.",
+      "street": "210 Ocean Road",
+      "city": "Williamsburg",
+      "state": "NSW",
+      "zip": 75002,
+      "country": "AU"
+    },
+    "sellerBankAccountNumber": "9876543210",
+    "originalLoadingLocation": {
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "iataAirportCode": "The quick brown fox jumps over the lazy dog.",
+      "unlocode": "https://jargon.sh"
+    },
+    "originCountry": {
+      "street": "The quick brown fox jumps over the lazy dog.",
+      "city": "The quick brown fox jumps over the lazy dog.",
+      "state": "The quick brown fox jumps over the lazy dog.",
+      "zip": 12345,
+      "iataAirportCode": "The quick brown fox jumps over the lazy dog.",
+      "unlocode": "https://jargon.sh"
+    },
+    "tradeTermsConditionsDescription": "FOB Los Angeles Seaport",
+    "tradeTermsConditionsCode": "FOB",
+    "paymentTerms": "Net 30 days",
+    "paymentMethod": "Wire Transfer",
+    "itemsShipped": [
+      {
+        "product": {
+          "id": "https://surfpro.example.com/boards/6footie",
+          "name": "Coast 6 Footie",
+          "description": "6ft PU surfboards"
+        },
+        "sku": "100023412",
+        "itemCount": "200",
+        "netWeight": {
+          "amount": "1200",
+          "unit": "KGS"
+        },
+        "grossWeight": {
+          "amount": "1340",
+          "unit": "KGS"
+        },
+        "productPrice": {
+          "amount": "210",
+          "currency": "AUD"
+        },
+        "commodity": "934510",
+        "price": {
+          "amount": "42000",
+          "currency": "AUD"
+        }
+      },
+      {
+        "product": {
+          "id": "https://surfpro.example.com/boards/7footie",
+          "name": "Coast 7 Footie",
+          "description": "7ft PU surfboards"
+        },
+        "sku": "100023412",
+        "itemCount": "260",
+        "netWeight": {
+          "amount": "1280",
+          "unit": "KGS"
+        },
+        "grossWeight": {
+          "amount": "1440",
+          "unit": "KGS"
+        },
+        "productPrice": {
+          "amount": "218",
+          "currency": "AUD"
+        },
+        "commodity": "934510",
+        "price": {
+          "amount": "56680",
+          "currency": "AUD"
+        }
+      }
+    ],
+    "totalAmount": {
+      "amount": "98680",
+      "currency": "AUD"
+    }
+  },
+  "validFrom": "2025-03-06:10:00"
+}
